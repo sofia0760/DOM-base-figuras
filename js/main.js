@@ -20,6 +20,9 @@ function agregarAnimacion() {
 function moverArriba() {
     figura.style.transform = "translateY(-50px)";
 }
+function moverAbajo(){
+    figura.style.transform = "translateY(50px)";
+}
 
 
 document.addEventListener("DOMContentLoaded",function () {
@@ -28,6 +31,7 @@ document.addEventListener("DOMContentLoaded",function () {
     document.getElementById("btnGif").addEventListener("click", CambiarGif);
     document.getElementById("btnAnim").addEventListener("click", agregarAnimacion);
     document.getElementById("btnMoveUp").addEventListener("click", moverArriba);
+    document.getElementById("btnMoveDown").addEventListener("click", moverAbajo);
 });
 
 
