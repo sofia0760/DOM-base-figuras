@@ -18,6 +18,7 @@ body {
   min-height: 92vh;
 }
 
+
 /* Columna izquierda */
 .left {
   flex: 1;
@@ -99,4 +100,16 @@ img{
 #mainLink{
     margin-top: 20px;
     display: block;
+}
+
+
+/* Animación simple de parpadeo de colores */
+@keyframes parpadeo {
+  0% { opacity: 1; }
+  50% { opacity: 0.3; }
+  100% { opacity: 1; }
+}
+
+.parpadear {
+  animation: parpadeo 1s infinite;
 }
