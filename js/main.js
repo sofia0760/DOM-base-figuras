@@ -17,7 +17,9 @@ function agregarAnimacion() {
     figura.classList.toggle("parpadear");
     figura.style.background = "pink";
 }
-
+function moverArriba() {
+    figura.style.transform = "translateY(-50px)";
+}
 
 
 document.addEventListener("DOMContentLoaded",function () {
@@ -25,6 +27,7 @@ document.addEventListener("DOMContentLoaded",function () {
     document.getElementById("btnStar").addEventListener("click",cambiarEstrella);
     document.getElementById("btnGif").addEventListener("click", CambiarGif);
     document.getElementById("btnAnim").addEventListener("click", agregarAnimacion);
+    document.getElementById("btnMoveUp").addEventListener("click", moverArriba);
 });
 
 
