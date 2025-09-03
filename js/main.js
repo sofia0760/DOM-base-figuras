@@ -19,9 +19,15 @@ function agregarAnimacion() {
 }
 function moverArriba() {
     figura.style.transform = "translateY(-50px)";
+    figura.style.transition = "all 1s ease-in-out";
 }
 function moverAbajo(){
     figura.style.transform = "translateY(50px)";
+    figura.style.transition = "all 1s ease-in-out";
+}
+function moverIzquierda(){
+    figura.style.transform = "translateX(-50px)";
+    figura.style.transition = "all 1s ease-in-out";
 }
 
 
@@ -32,6 +38,7 @@ document.addEventListener("DOMContentLoaded",function () {
     document.getElementById("btnAnim").addEventListener("click", agregarAnimacion);
     document.getElementById("btnMoveUp").addEventListener("click", moverArriba);
     document.getElementById("btnMoveDown").addEventListener("click", moverAbajo);
+    document.getElementById("btnMoveLeft").addEventListener("click", moverIzquierda);
 });
 
 
