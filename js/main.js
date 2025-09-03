@@ -47,6 +47,10 @@ function cambiarParrafo(){
     let nuevoParrafo = prompt("Escribe un nuevo parrafo:");
     mainParagraph.textContent = nuevoParrafo;
 }
+function agregarParrafo(){
+    let parrafoAgregado = prompt("Agregue un nuevo parrafo:");
+    extraParagraphs.innerText = parrafoAgregado;
+}
 
 
 document.addEventListener("DOMContentLoaded",function () {
@@ -60,6 +64,7 @@ document.addEventListener("DOMContentLoaded",function () {
     document.getElementById("btnMoveRight").addEventListener("click", moverDerecha);
     document.getElementById("btnChangeTitle").addEventListener("click",cambiarTitulo);
     document.getElementById("btnChangeParagraph").addEventListener("click",cambiarParrafo);
+    document.getElementById("btnAddParagraph").addEventListener("click",agregarParrafo);
 });
 
 
