@@ -1,4 +1,6 @@
 const figura = document.getElementById('figure');
+// <!-- Estilos -->
+
 function cambiarCirculo(){
     figura.style.borderRadius = "50%";
     figura.style.background = "purple";
@@ -34,6 +36,14 @@ function moverDerecha(){
     figura.style.transition = "all 1s ease-in-out";
 }
 
+//<!-- Contenidos -->
+
+function   cambiarTitulo(){
+    let nuevoTitulo = prompt ("Escribe un nuevo titulo:");
+    mainTitle.innerText = nuevoTitulo;
+}  
+
+
 document.addEventListener("DOMContentLoaded",function () {
     document.getElementById("btnCircle").addEventListener("click",cambiarCirculo);
     document.getElementById("btnStar").addEventListener("click",cambiarEstrella);
@@ -43,6 +53,7 @@ document.addEventListener("DOMContentLoaded",function () {
     document.getElementById("btnMoveDown").addEventListener("click", moverAbajo);
     document.getElementById("btnMoveLeft").addEventListener("click", moverIzquierda);
     document.getElementById("btnMoveRight").addEventListener("click", moverDerecha);
+    document.getElementById("btnChangeTitle").addEventListener("click",cambiarTitulo);
 });
 
 
