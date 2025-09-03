@@ -51,6 +51,9 @@ function agregarParrafo(){
     let parrafoAgregado = prompt("Agregue un nuevo parrafo:");
     extraParagraphs.innerText = parrafoAgregado;
 }
+function eliminarParrafo(){
+    extraParagraphs.remove();
+}
 
 
 document.addEventListener("DOMContentLoaded",function () {
@@ -65,6 +68,7 @@ document.addEventListener("DOMContentLoaded",function () {
     document.getElementById("btnChangeTitle").addEventListener("click",cambiarTitulo);
     document.getElementById("btnChangeParagraph").addEventListener("click",cambiarParrafo);
     document.getElementById("btnAddParagraph").addEventListener("click",agregarParrafo);
+    document.getElementById("btnRemoveParagraph").addEventListener("click",eliminarParrafo);
 });
 
 
