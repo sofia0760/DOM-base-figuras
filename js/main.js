@@ -29,7 +29,10 @@ function moverIzquierda(){
     figura.style.transform = "translateX(-50px)";
     figura.style.transition = "all 1s ease-in-out";
 }
-
+function moverDerecha(){
+    figura.style.transform = "translateX(50px)";
+    figura.style.transition = "all 1s ease-in-out";
+}
 
 document.addEventListener("DOMContentLoaded",function () {
     document.getElementById("btnCircle").addEventListener("click",cambiarCirculo);
@@ -39,6 +42,7 @@ document.addEventListener("DOMContentLoaded",function () {
     document.getElementById("btnMoveUp").addEventListener("click", moverArriba);
     document.getElementById("btnMoveDown").addEventListener("click", moverAbajo);
     document.getElementById("btnMoveLeft").addEventListener("click", moverIzquierda);
+    document.getElementById("btnMoveRight").addEventListener("click", moverDerecha);
 });
 
 
