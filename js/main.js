@@ -54,7 +54,14 @@ function agregarParrafo(){
 function eliminarParrafo(){
     extraParagraphs.remove();
 }
+function cambiarHex(){
+    let nuevoHex = prompt ("Ingrese un color en formato #HEX");
+    figura.style.backgroundColor = nuevoHex;
+}
+// function elegirFigura(){
+//     let nuevaFigura = prompt("Elige entre: Circulo, Estrella, Cuadrado");
 
+// }
 
 document.addEventListener("DOMContentLoaded",function () {
     document.getElementById("btnCircle").addEventListener("click",cambiarCirculo);
@@ -69,6 +76,8 @@ document.addEventListener("DOMContentLoaded",function () {
     document.getElementById("btnChangeParagraph").addEventListener("click",cambiarParrafo);
     document.getElementById("btnAddParagraph").addEventListener("click",agregarParrafo);
     document.getElementById("btnRemoveParagraph").addEventListener("click",eliminarParrafo);
+
+    document.getElementById("btnHexColor").addEventListener("click",cambiarHex);
 });
 
 
