@@ -9,7 +9,7 @@ function cambiarCirculo(){
 // 2. Cambiar a estrella → Convierte la figura en una estrella con clip-path.
 function cambiarEstrella(){
     figura.style.clipPath ="polygon(50% 0%, 61% 35%, 98% 35%, 68% 57%, 79% 91%, 50% 70%, 21% 91%, 32% 57%, 2% 35%, 39% 35%)";
-    figura.style.background = "green";
+    figura.style.background = "purple";
 }
 
 // 3. Poner fondo GIF → Cambia el fondo de la figura por un GIF animado.
@@ -21,31 +21,35 @@ function CambiarGif(){
 // 4. Agregar animación → Aplica una animación CSS (por ejemplo, rotación infinita).
 function agregarAnimacion() {
     figura.classList.toggle("girando");
-    figura.style.background = "pink";
+    figura.style.background = "purple";
 }
 
 // 5. Mover arriba → Desplaza la figura hacia arriba.
 function moverArriba() {
     figura.style.transform = "translateY(-50px)";
     figura.style.transition = "all 1s ease-in-out";
+    figura.style.background = "purple";
 }
 
 // 6. Mover abajo → Desplaza la figura hacia abajo.
 function moverAbajo(){
     figura.style.transform = "translateY(50px)";
     figura.style.transition = "all 1s ease-in-out";
+    figura.style.background = "purple";
 }
 
 //7. Mover izquierda → Desplaza la figura hacia la izquierda.
 function moverIzquierda(){
     figura.style.transform = "translateX(-50px)";
     figura.style.transition = "all 1s ease-in-out";
+    figura.style.background = "purple";
 }
 
 // 8. Mover derecha → Desplaza la figura hacia la derecha.
 function moverDerecha(){
     figura.style.transform = "translateX(50px)";
     figura.style.transition = "all 1s ease-in-out";
+    figura.style.background = "purple";
 }
 
 //<!-- Contenidos -------------------------------------------------------------------------------------------------------------->
@@ -137,7 +141,7 @@ function imagenAtras(){
     imagen.setAttribute("src", imagenes[indice]);
 }
 
-// 17. Mostrar/Ocultar imagen → Alternar la visibilidad (display: none/block) de la imagen.
+// 17. Mostrar/Ocultar imagen → Alternar la visibilidad (display: none/block) de la imagen.(se aggrego en la linea 127)
 function ocultarImagen(){
     const ocultar = document.getElementById("mainImage");
     ocultar.classList.toggle("oculto");

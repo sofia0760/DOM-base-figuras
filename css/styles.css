@@ -7,7 +7,7 @@
 }
 
 body {
-  background-color: #000000;
+  background-color: #fafafa;
   padding: 20px;
 }
 
@@ -22,7 +22,7 @@ body {
 /* Columna izquierda */
 .left {
   flex: 1;
-  background: #fff;
+  background: #000000;
   padding: 20px;
   border-radius: 10px;
   box-shadow: 0 0 8px rgba(0,0,0,0.1);
@@ -32,7 +32,7 @@ body {
 .left h2,
 .right h2 {
   padding: 20px;
-  color: #013889;
+  color: #f0eeef;
   font-size: 30px;
 }
 
@@ -45,7 +45,7 @@ body {
 button {
   padding: 14px 20px;
   border: none;
-  background: #013889;
+  background: #440142;
   color: #fff;
   border-radius: 8px;
   cursor: pointer;
@@ -67,7 +67,7 @@ button:hover {
 /* Columna derecha */
 .right {
   flex: 1;
-  background: #fff;
+  background: #080808;
   padding: 20px;
   border-radius: 10px;
   box-shadow: 0 0 8px rgba(0,0,0,0.1);
@@ -76,6 +76,13 @@ button:hover {
 
 .right h2 {
   margin-bottom: 20px;
+  color :#f0eeef
+}
+.right p{
+  color: #f0eeef;
+}
+.right h1{
+  color:#f0eeef;
 }
 
 /* Figura base */
@@ -115,4 +122,8 @@ img{
 
 .girando {
   animation: girar 2s linear infinite;
+}
+/* ejercicio 17 */
+.oculto{
+  display: none;
 }
