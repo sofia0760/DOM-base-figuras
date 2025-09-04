@@ -104,15 +104,15 @@ img{
 
 
 /* Animación simple de parpadeo de colores */
-@keyframes parpadeo {
-  0% { opacity: 1; }
-  50% { opacity: 0.3; }
-  100% { opacity: 1; }
+@keyframes girar {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
 }
 
-.parpadear {
-  animation: parpadeo 1s infinite;
-}
-.oculto{
-  display: none;
+.girando {
+  animation: girar 2s linear infinite;
 }
