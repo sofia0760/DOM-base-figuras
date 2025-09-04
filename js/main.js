@@ -117,11 +117,20 @@ function imagenAtras(){
 function ocultarImagen(){
     const ocultar = document.getElementById("mainImage");
     ocultar.classList.toggle("oculto");
-
-
-
+}
+//18.Cambiar atributo ALT → Con prompt, pedir un texto y asignarlo como atributo alt de la imagen.
+function cambiarAtributo(){
+    const atributo = document.getElementById("mainImage");
+    let texto = prompt("Digite el texto para asignarselo al ALT");
+    atributo.setAttribute("alt", texto);
 }
 
+//19.Cambiar enlace (prompt) → Con prompt, pedir una nueva URL y asignarla al <a> (atributo href).
+function cambiarEnlace(){
+    const enlace = document.getElementById("mainLink");
+    let nuevaUrl = prompt("Ingrese una nueva URL");
+    enlace.setAttribute("href",nuevaUrl);
+}
 
 document.addEventListener("DOMContentLoaded",function () {
     document.getElementById("btnCircle").addEventListener("click",cambiarCirculo);
@@ -142,6 +151,9 @@ document.addEventListener("DOMContentLoaded",function () {
     document.getElementById("btnChangeImageNext").addEventListener("click",cambiarImagen);
     document.getElementById("btnChangeImagePrev").addEventListener("click",imagenAtras);
     document.getElementById("btnToggleImage").addEventListener("click",ocultarImagen);
+    document.getElementById("btnChangeAlt").addEventListener("click",cambiarAtributo);
+    document.getElementById("btnChangeLink").addEventListener("click",cambiarEnlace);
+
 });
 
 
