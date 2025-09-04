@@ -58,10 +58,27 @@ function cambiarHex(){
     let nuevoHex = prompt ("Ingrese un color en formato #HEX");
     figura.style.backgroundColor = nuevoHex;
 }
-// function elegirFigura(){
-//     let nuevaFigura = prompt("Elige entre: Circulo, Estrella, Cuadrado");
+function elegirFigura(){
+    let nuevaFigura = prompt("Elige entre: Circulo, Estrella, Cuadrado");
+    switch (nuevaFigura) {
+        case "circulo":
+            figura.style.borderRadius = "50%";
+            break;
 
-// }
+        case "estrella":
+            figura.style.clipPath ="polygon(50% 0%, 61% 35%, 98% 35%, 68% 57%, 79% 91%, 50% 70%, 21% 91%, 32% 57%, 2% 35%, 39% 35%)"; 
+            break;
+            
+        case "cuadrado":
+            figura.style.borderRadius = "0";   
+            
+            break;    
+    
+        default:
+            break;
+    }
+
+}
 
 document.addEventListener("DOMContentLoaded",function () {
     document.getElementById("btnCircle").addEventListener("click",cambiarCirculo);
@@ -78,6 +95,7 @@ document.addEventListener("DOMContentLoaded",function () {
     document.getElementById("btnRemoveParagraph").addEventListener("click",eliminarParrafo);
 
     document.getElementById("btnHexColor").addEventListener("click",cambiarHex);
+    document.getElementById("btnChooseFigure").addEventListener("click",elegirFigura);
 });
 
 
