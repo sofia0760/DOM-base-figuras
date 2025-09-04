@@ -54,6 +54,9 @@ function agregarParrafo(){
 function eliminarParrafo(){
     extraParagraphs.remove();
 }
+
+//<!-- Atributos-->
+
 function cambiarHex(){
     let nuevoHex = prompt ("Ingrese un color en formato #HEX");
     figura.style.backgroundColor = nuevoHex;
@@ -77,8 +80,48 @@ function elegirFigura(){
         default:
             break;
     }
+}
+
+let indice = 0;  
+function cambiarImagen(){
+    const imagenes = ["img/imagen.jpg", "img/imagen2.jpg", "img/imagen3.jpg"]; //areglo de las imagenes
+    const imagen = document.getElementById("mainImage");
+
+    //avanzar al siguiente indice
+    indice ++;
+
+    //cuando llegue al final, que se reinice
+    if (indice >= imagenes.length){
+        indice = 0;
+    }
+    //cambiamos el src
+    imagen.setAttribute("src", imagenes[indice]);
+}
+
+function imagenAtras(){
+    const imagenes = ["img/imagen.jpg", "img/imagen2.jpg", "img/imagen3.jpg"]; //areglo de las imagenes
+    const imagen = document.getElementById("mainImage");
+
+    //avanzar al siguiente indice
+    indice --;
+
+    //cuando llegue al final, que se reinice
+    if (indice < 0){
+        indice = imagenes.length - 1
+    }
+       
+    //cambiamos el src
+    imagen.setAttribute("src", imagenes[indice]);
+}
+
+function ocultarImagen(){
+    const ocultar = document.getElementById("mainImage");
+    ocultar.classList.toggle("oculto");
+
+
 
 }
+
 
 document.addEventListener("DOMContentLoaded",function () {
     document.getElementById("btnCircle").addEventListener("click",cambiarCirculo);
@@ -96,6 +139,9 @@ document.addEventListener("DOMContentLoaded",function () {
 
     document.getElementById("btnHexColor").addEventListener("click",cambiarHex);
     document.getElementById("btnChooseFigure").addEventListener("click",elegirFigura);
+    document.getElementById("btnChangeImageNext").addEventListener("click",cambiarImagen);
+    document.getElementById("btnChangeImagePrev").addEventListener("click",imagenAtras);
+    document.getElementById("btnToggleImage").addEventListener("click",ocultarImagen);
 });
 
 

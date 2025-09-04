@@ -113,3 +113,6 @@ img{
 .parpadear {
   animation: parpadeo 1s infinite;
 }
+.oculto{
+  display: none;
+}
