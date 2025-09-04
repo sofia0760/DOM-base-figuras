@@ -131,6 +131,13 @@ function cambiarEnlace(){
     let nuevaUrl = prompt("Ingrese una nueva URL");
     enlace.setAttribute("href",nuevaUrl);
 }
+//20.Abrir enlace en nueva pestaña → Forzar que el enlace se abra en otra pestaña con target="_blank".
+function nuevoEnlace(){
+    const enlacePestana = document.querySelector("#mainLink");
+    enlacePestana.setAttribute("target","_blank");
+}
+
+
 
 document.addEventListener("DOMContentLoaded",function () {
     document.getElementById("btnCircle").addEventListener("click",cambiarCirculo);
@@ -153,6 +160,7 @@ document.addEventListener("DOMContentLoaded",function () {
     document.getElementById("btnToggleImage").addEventListener("click",ocultarImagen);
     document.getElementById("btnChangeAlt").addEventListener("click",cambiarAtributo);
     document.getElementById("btnChangeLink").addEventListener("click",cambiarEnlace);
+    document.getElementById("btnOpenLink").addEventListener("click",nuevoEnlace);
 
 });
 
